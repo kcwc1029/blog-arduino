@@ -56,28 +56,91 @@ if (PINB & B00000100) {
   // D10 腳位為 HIGH，就執行這段
 }
 ```
+### 1.2. Lab：連接七段顯示器與開發板
+
+
+## 2. 積體電路（IC）：
+- 將多個電子元件整合於一個小晶片上，完成特定電路功能。
+- 優點：體積小、可靠性高、價格低廉，廣泛用於各種電子產品。
+
+分類：
+- **數位IC**：處理邏輯運算、計數、解碼、編碼等（二進位0與1）。
+- **類比IC**：處理放大、調節電壓等連續訊號。
+
+命名方式（例：HD74HC08P）：
+- **廠牌代碼**：HD（Hitachi）
+- **系列/功能型號**：74HC08
+- **封裝型式**：P 表示 DIP（雙列直插封裝）
+
+DIP封裝特徵：
+- 有 **半月形缺口** 與 **圓點** 用來標示第1腳位。
+- 腳距 2.54mm（0.1吋）。
+- 並排型封裝（Dual In-line Package）。
+
+![upgit_20250402_1743576444.png](https://raw.githubusercontent.com/kcwc1029/obsidian-upgit-image/main/2025/04/upgit_20250402_1743576444.png)
+
+![upgit_20250402_1743576556.png](https://raw.githubusercontent.com/kcwc1029/obsidian-upgit-image/main/2025/04/upgit_20250402_1743576556.png)
+
+
+### 2.1. 使用IC擴充arduino的輸出腳位
+原生使用七段顯示器會有缺點：
+- 使用到pin0與pin1
+- 佔用太多腳位
+因次，我們可以透過積體電路元件來擴充arduino的輸出腳位
+
+減少auduino腳位的普遍解決方式，就是將原本「並聯」元件的接法，改為「串連」
+常見的手法是採用74HC595的串入並出IC，充當arduino與七段顯示器之間的媒介
+
+![upgit_20250402_1743576829.png](https://raw.githubusercontent.com/kcwc1029/obsidian-upgit-image/main/2025/04/upgit_20250402_1743576829.png)
 
 
 
+## 3. 74HC595 簡介
+**74HC595** 是一個 **8位元移位暫存器（shift register）**。
+可將 74HC595 想像成一條生產線：
+- 資料從一個稱為 **SER**（serial）輸入端進入，類似將物品依序送入輸送帶。
+- 每次時脈（clock）觸發，就像齒輪轉動一次，整條生產線上的物品就會**向左移動一格**。
+- 這樣資料就可以從**串列輸入**轉為**並列輸出**。
 
 
+![upgit_20250402_1743577972.png](https://raw.githubusercontent.com/kcwc1029/obsidian-upgit-image/main/2025/04/upgit_20250402_1743577972.png)
+
+![upgit_20250402_1743578037.png](https://raw.githubusercontent.com/kcwc1029/obsidian-upgit-image/main/2025/04/upgit_20250402_1743578037.png)
+
+![upgit_20250402_1743578055.png](https://raw.githubusercontent.com/kcwc1029/obsidian-upgit-image/main/2025/04/upgit_20250402_1743578055.png)
 
 
+### 3.1. 使用 `shiftOut()` 函數 傳輸序列資料給 74HC595
+`shiftOut()` 是 Arduino 提供的函數，用來**序列資料位移輸出**。
+可一次傳送 **8 位元（1 byte）** 資料給 **74HC595**。
+只需設定資料與時脈腳位，不需處理移位細節。
+
+```cpp
+// 函數語法
+shiftOut(資料輸出腳位, 時脈腳位, 位元順序, 資料值);
+
+資料輸出腳位：資料輸入端 SER。
+時脈腳位：控制移動節奏的 SHCP。
+位元順序：
+  - `MSBFIRST`：最左邊（高位元）先送
+  - `LSBFIRST`：最右邊（低位元）先送
+資料值：一個 `byte` 數值（8 位元）
+```
+
+位元順序的差異說明：
+```cpp
+假設：
+byte ledData = 0b11100000;
+
+LSBFIRST 傳輸：00000111（最低位元在前）
+MSBFIRST 傳輸： 11100000（最高位元在前）
+```
 
 
+### 3.2. Lab：使用 74595 IC 連接七段顯示器，並在七段顯示器上每隔一秒顯示 0~9數字。
 
 
-
-
-
-
-
-
-
-
-
-
-
+### 3.3. Lab：使用一個 74595 IC 控制多個七段顯示器
 
 
 

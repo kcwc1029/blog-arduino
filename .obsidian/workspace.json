@@ -88,8 +88,7 @@
               "title": "書籤"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -179,7 +178,7 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "1f19379a115a8167",
+  "active": "1c8fbd37e16447bc",
   "lastOpenFiles": [
     "Arduino02序列阜通信(UART).md",
     "Arduino03LED七段顯示器.md",

@@ -2,6 +2,8 @@
 
 ![upgit_20250401_1743500023.png|523x413](https://raw.githubusercontent.com/kcwc1029/obsidian-upgit-image/main/2025/04/upgit_20250401_1743500023.png)
 
+![upgit_20250404_1743696917.png|1113x788](https://raw.githubusercontent.com/kcwc1029/obsidian-upgit-image/main/2025/04/upgit_20250404_1743696917.png)
+
  數位腳位（Digital I/O）：
  - D0~D13：數位輸入/輸出
 - D3、5、6、9、10、11：支援 PWM 輸出
@@ -78,6 +80,7 @@ UNO R3 是 8 位元處理器，所以 `double` 實際上和 `float` 一樣，都
 | `long`   | 長整數    | 4 Bytes                       | 約 ±21 億（32 位元）    |
 | `float`  | 浮點數    | 4 Bytes                       | 約 ±3.4E±38（32 位元） |
 | `double` | 高精度浮點數 | 4 Bytes（UNO）或 8 Bytes（UNO R4） | ±1.7E±308（64 位元）  |
+|          |        |                               |                   |
 
 ### 3.2. signed / unsigned 差異
 

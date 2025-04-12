@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Arduino06I2C通訊界面與LCD.md",
+                "file": "Arduino10RFID.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Arduino06I2C通訊界面與LCD"
+              "title": "Arduino10RFID"
             }
           }
         ],
@@ -153,13 +153,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Arduino06I2C通訊界面與LCD.md",
+                "file": "Arduino10RFID.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Arduino06I2C通訊界面與LCD 的大綱"
+              "title": "Arduino10RFID 的大綱"
             }
           }
         ],
@@ -181,12 +181,19 @@
   },
   "active": "c5335d5a3692c2ea",
   "lastOpenFiles": [
-    "Arduino05類比訊號處理與運算放大器(OPA).md",
+    "Arduino11人機介面.md",
+    "Arduino10RFID.md",
     "Arduino06I2C通訊界面與LCD.md",
-    "Arduino03LED七段顯示器.md",
+    "Arduino07PWM與馬達.md",
+    "Arduino10紅外線.md",
+    "Arduino09紅外線與EEPROM.md",
+    "未命名",
+    "Arduino08發音體、超音波感測器.md",
+    "Arduino05類比訊號處理與運算放大器(OPA).md",
     "Arduino04SPI介面與LED點陣顯示器.md",
-    "Arduino01開發版.md",
     "Arduino02序列阜通信(UART).md",
+    "Arduino01開發版.md",
+    "Arduino03LED七段顯示器.md",
     "attachments/image.png",
     "Arduino.drawio",
     "開關.md",
@@ -201,7 +208,6 @@
     "F5799/附錄/F5799_CHGG(21) 電子書.pdf",
     "F5799/附錄/F5799_CHEE(06) 電子書.pdf",
     "F5799/附錄/F5799_CHFF(13) 電子書.pdf",
-    "F5799/附錄/F5799_CHDD(11) 電子書.pdf",
     "F5799/範例檔/appB/diyB_6/data/www/img/logo.png",
     "F5799/範例檔/appB/diyB_5/data/www/img/logo.png",
     "F5799/程式庫/Webduino/examples/Web_Image/led.png",
@@ -217,14 +223,8 @@
     "計算機結構組織/02邏輯數學運算/邏輯數學運算.md",
     "8051/8051.md",
     "2025就業博覽會.md",
-    "計算機結構組織/計算機結構v1.md",
     "作業系統/attachments/Pasted image 20250310143833.png",
     "作業系統/attachments/Pasted image 20250306220512.png",
-    "Docker/README.md",
-    "c++/【12 Introduction to Classes, Objects and Strings】.md",
-    "Docker/Nodejs App Start Setup/node_modules/side-channel-list/CHANGELOG.md",
-    "Docker/Nodejs App Start Setup/node_modules/vary/README.md",
-    "Docker/Nodejs App Start Setup/node_modules/iconv-lite/README.md",
     "c++/leetcode題目/attachments/20241106_112148821_iOS.png",
     "D1mini(ESP8266)/MP32410_examples/ch05/temp/ball0.jpg"
   ]
